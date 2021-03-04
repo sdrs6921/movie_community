@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository
+//@Repository
 public class MemoryUserRepository implements UserRepository {
     private static Map<String, User> store = new HashMap<>();// KEY: 아이디
 
