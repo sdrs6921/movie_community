@@ -1,7 +1,14 @@
 package com.dobby.movie_community.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="user_table")
 public class User {
-//    private Long uid; // Number (시퀀스 : 자동 증가)
+
+    @Id
     private String user_id; // VARCHAR2(50)
     private String user_password; // VARCHAR2(50)
     private String user_gender; // CHAR(1)
@@ -10,14 +17,6 @@ public class User {
     private String user_address; // VARCHAR2(200)
     private String user_birth; // DATE
     private String user_phone; // VARCHAR2(50)
-
-//    public Long getUid() {
-//        return uid;
-//    }
-//
-//    public void setUid(Long uid) {
-//        this.uid = uid;
-//    }
 
     public String getUser_id() {
         return user_id;
@@ -81,19 +80,5 @@ public class User {
 
     public void setUser_phone(String user_phone) {
         this.user_phone = user_phone;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "user_id='" + user_id + '\'' +
-                ", user_password='" + user_password + '\'' +
-                ", user_gender='" + user_gender + '\'' +
-                ", user_name='" + user_name + '\'' +
-                ", user_email='" + user_email + '\'' +
-                ", user_address='" + user_address + '\'' +
-                ", user_birth='" + user_birth + '\'' +
-                ", user_phone='" + user_phone + '\'' +
-                '}';
     }
 }
